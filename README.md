@@ -1,5 +1,5 @@
 # [Project Title]
-*A concise, descriptive title for your analysis.*
+*Marketing Performnce Campaign Analysis*
 
 ## 📖 Table of Contents
 - [Project Overview](#-project-overview)
@@ -12,10 +12,12 @@
 - [How to Use](#-how-to-use)
 
 ## 📊 Project Overview
-Provide a high-level summary of the goals. What business problem were you trying to solve? For example: "Analyzing customer churn to identify high-risk segments and improve retention strategies."
+This project focuses on analysing marketing campaign performance using Python and Power BI. It helps to understand which campaigns and marketing channels perform better.
+The project analyses revenue, cost, ROI, CTR, CPC, clicks, conversions, and customer engagement.
+The main goal is to find useful business insights and help businesses make better marketing decisions.
 
 ## 🗂️ Data Source
-Describe where you got the data (e.g., Kaggle, company database, web scraping). Mention the size and key variables.
+Hugging face data source. The dataset contains 20,000 records and 16 columns.
 
 ## 🛠️ Tools & Technologies
 - **Language:** Python (Pandas, NumPy, Seaborn) or R
@@ -24,28 +26,45 @@ Describe where you got the data (e.g., Kaggle, company database, web scraping). 
 - **Documentation:** Jupyter Notebook
 
 ## 🧹 Data Cleaning & Preparation
-Detail the steps you took to make the data usable:
-1. Handled missing values and duplicates.
-2. Formatted data types (e.g., dates).
-3. Created new calculated columns (Feature Engineering).
-
+1. Handled Missing Values and Duplicates
+- Checked missing values in the dataset.
+- Removed duplicate rows.
+- Checked duplicate Campaign IDs and kept the first occurrence.
+2. Formatted Data Types
+- Converted the date column into datetime format.
+- Converted numerical columns into numeric format.
+- Removed $, commas and the word "days" from values.
+- Renamed columns by removing extra spaces and using lowercase letters.
+3. Created New Calculated Columns (Feature Engineering)
+- Extracted month from the date column for monthly analysis.
+- Created new columns where needed for campaign performance analysis.
 ## 🔍 Exploratory Data Analysis (EDA)
-What were the main questions you explored?
-- What is the overall sales trend?
-- Is there a correlation between price and customer rating?
+What is the overall spend, revenue, profit and ROI?
+- Which channels, campaign types and audiences perform best?
+- How do revenue and conversions change by month?
+- What drives profit: spend, ROI, clicks, CTR, CPC, conversion?
+- Do bigger budgets pay off (cost per conversion)?
+- How should CTR/CPC outliers be handled? (capped at the IQR limit, raw values kept)
 
-> **Tip:** Insert a screenshot of one key visualization here to catch the reader's eye.
+
+<img width="946" height="684" alt="Heat map" src="https://github.com/user-attachments/assets/9d89766f-703c-42a2-a8c9-1038b091f09e" />
+
+
 
 ## 💡 Key Insights
-List your top 3–5 findings in bullet points.
-- **Insight 1:** Sales peaked in Q4, primarily driven by holiday promotions.
-- **Insight 2:** Customers aged 25-34 have the highest lifetime value.
+Campaign Performance: Social Media campaigns achieved the highest average ROI compared to other campaign types.
+Campaign Distribution: All five campaign types had almost equal numbers of campaigns.
+Revenue Analysis: Monthly revenue analysis helps identify changes in campaign revenue over time.
+Channel Performance: Different marketing channels showed differences in CTR and conversion rates.
+Customer Engagement: Engagement levels were slightly different across campaign types.
 
 ## 🚀 Recommendations
-Translate your insights into actionable business advice.
-- "Increase marketing budget for the 25-34 demographic."
-- "Re-evaluate the pricing strategy for low-performing regions."
-
+Don't move budget between channels; their ROI is within 0.1x.
+Focus more on campaign types that generate higher ROI.
+Improve marketing strategies for low-performing channels.
+Monitor monthly revenue to identify performance changes.
+Improve customer engagement to increase conversions.
+Compare marketing costs and revenue before allocating campaign budgets.
 ## ⚙️ How to Use
 Explain how someone else can run your project.
 - List dependencies (e.g., `pip install -r requirements.txt`).
