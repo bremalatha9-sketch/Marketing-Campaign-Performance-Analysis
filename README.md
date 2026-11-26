@@ -48,7 +48,12 @@ What is the overall spend, revenue, profit and ROI?
 
 
 <img width="946" height="684" alt="Heat map" src="https://github.com/user-attachments/assets/9d89766f-703c-42a2-a8c9-1038b091f09e" />
+This is a Correlation Heatmap. It shows the relationship between different campaign performance metrics.
 
+What is it saying? shows whether two metrics have a positive or negative relationship. 
+What features you used? acquisition_cost(),revenue(), roi, clicks, conversion Rate,ctc,cpc,profit revenue moves with spend (0.75) and ROI (0.63). CTR, CPC, conversion rate and engagement are near 0.0 with profit, so they don't predict it.
+
+From this what you are showing us? Acquisition Cost and Revenue: 0.75 (Strong positive relationship). ROI and Revenue: 0.63 (Positive relationship). CTR and CPC: -0.48 (Negative relationship). Other metrics show very little correlation. correlation heatmap to analyse the relationship between different campaign performance metrics. Red indicates positive correlation, and blue indicates negative correlation. From this chart, I found that acquisition cost and revenue have a strong positive correlation of 0.75. ROI and revenue also have a positive correlation of 0.63. This helps us understand the relationship between different marketing metrics.
 
 
 ## 💡 Key Insights
